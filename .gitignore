@@ -1,0 +1,40 @@
+# Environments / caches
+.venv/
+.venv-da3/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# LaTeX build artefacts
+*.aux
+*.log
+!results/ca1m/*/*.log
+*.out
+*.synctex.gz
+
+# ---------------------------------------------------------------------------
+# results/: regenerable outputs are ignored; only a small reference sample is
+# tracked (all metrics, report figures/tables, one sequence per config).
+# ---------------------------------------------------------------------------
+results/**
+!results/**/
+
+# metrics + run logs for one sample sequence, per config
+!results/ca1m/*/metrics.json
+!results/ca1m/*/metrics.txt
+!results/ca1m/*/ca1m-val-42897552.log
+!results/ca1m/*/ca1m-val-42897552/*.csv
+
+# DA3 depth: error summary only (PNG depth maps are ~640 MB)
+!results/depth/da3metric/depth_errors.json
+
+# report figures, tables, paper source (viz/ frame dumps are ~140 MB)
+!results/report/*.pdf
+!results/report/*.png
+!results/report/*.txt
+!results/report/*.md
+!results/report/paper/*.tex
+!results/report/paper/*.pdf
+!results/report/paper/*.png
+!results/report/viz/*/ca1m-val-42897552/boxer_viz_current.jpg

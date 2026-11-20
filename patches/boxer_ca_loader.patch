@@ -1,0 +1,38 @@
+diff --git a/loaders/ca_loader.py b/loaders/ca_loader.py
+index 7012f81..5a229f8 100644
+--- a/loaders/ca_loader.py
++++ b/loaders/ca_loader.py
+@@ -24,6 +24,15 @@ def _read_json(path):
+         return json.load(f)
+ 
+ 
++def _depth_path(data_dir, seq_name, tag):
++    """CA-1M iPad LiDAR depth by default. AER1515: if BOXER_DEPTH_DIR is set, read an
++    alternative depth map (uint16 PNG, millimetres) from $BOXER_DEPTH_DIR/<seq>/<tag>.png."""
++    alt = os.environ.get("BOXER_DEPTH_DIR")
++    if alt:
++        return os.path.join(alt, seq_name, tag + ".png")
++    return os.path.join(data_dir, tag + ".wide", "depth.png")
++
++
+ def _load_world_obbs(data_dir):
+     """Load world-level OBBs and metadata from an extracted CA-1M directory."""
+     world_path = os.path.join(data_dir, "world.gt", "instances.json")
+@@ -232,7 +241,7 @@ class CALoader(BaseLoader):
+                 _read_json(os.path.join(data_dir, tag + ".wide", "image", "K.json"))
+             )
+             depth_raw = np.array(
+-                Image.open(os.path.join(data_dir, tag + ".wide", "depth.png"))
++                Image.open(_depth_path(data_dir, self.seq_name, tag))
+             )
+             img_path = os.path.join(data_dir, tag + ".wide", "image.png")
+             with Image.open(img_path) as im:
+@@ -290,7 +299,7 @@ class CALoader(BaseLoader):
+ 
+         # Load depth and sample semi-dense points (uniform grid subsampling).
+         depth_raw = np.array(
+-            Image.open(os.path.join(data_dir, image_tag + ".wide", "depth.png"))
++            Image.open(_depth_path(data_dir, self.seq_name, image_tag))
+         )
+         depth_resize = cv2.resize(depth_raw, (W, H), interpolation=cv2.INTER_NEAREST)
+         depth_m = depth_resize.astype(np.float32) / 1000.0

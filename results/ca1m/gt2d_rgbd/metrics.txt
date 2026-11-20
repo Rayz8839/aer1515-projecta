@@ -1,0 +1,8 @@
+
+results/ca1m/gt2d_rgbd  (10 seqs, 6138 GT/pred frames, 6081 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.450   0.388   0.566   0.625   0.494
+per_scene    0.404   0.387   0.508   0.583   0.441
+per_frame: 65,219 true objects, 61,429 predicted boxes; found (recall) at IoU 0.05: 81.5%, at 0.25: 63.9%
+per_scene: 887 true objects, 823 predicted boxes; found (recall) at IoU 0.05: 70.8%, at 0.25: 57.7%
+wrote results/ca1m/gt2d_rgbd/metrics.json

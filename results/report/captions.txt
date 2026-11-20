@@ -1,0 +1,11 @@
+Fig. 1  Boxer pipeline. For each video frame, a 2D detector (OWLv2) draws boxes around objects. BoxerNet turns each 2D box into a 3D box using image features, the camera pose and, optionally, measured depth. A fusion step merges the boxes from different frames that belong to the same object. Our project replaces the measured depth (green) with depth estimated from the image.
+
+Fig. 2  Reproduction of Boxer on the 10 CA-1M validation sequences used in the paper. Left: each frame is scored on its own. Right: the fused, whole-room boxes are scored. Our per-frame numbers are within 0.01-0.04 of the paper and keep its ranking. The per-scene numbers differ more, because the paper does not fully specify that protocol.
+
+Fig. 3  Accuracy as the required 3D overlap gets stricter. mAP is the average of these curves over 0.05-0.5. Most of the drop at high overlap comes from small objects, where a few centimetres of error is a large fraction of the box.
+
+Fig. 4  Per-frame mAP by object volume. Without depth, small objects are almost never placed correctly (0.027). Depth helps every size, but medium and small objects benefit most.
+
+Fig. 5  One frame from ca1m-val-42897552. Left: OWLv2 2D boxes. Middle and right: Boxer's 3D boxes drawn back onto the image, with and without depth. The two look almost the same from the camera's own viewpoint, because a box that is too far away and too large projects to the same outline as the correct box. The error is in distance and size, which this view cannot show. That is exactly the error depth fixes.
+
+Fig. 6  One frame (ca1m-val-42897552, frame 125). Top: 3D boxes drawn on the image, from Boxer with OWLv2 2D boxes and depth (blue), Boxer with OWLv2 2D boxes and no depth (orange), and the true CA-1M boxes (green). Bottom: the same boxes seen from above, with the true boxes dashed in grey. From the camera, the blue and orange boxes look alike. From above, the RGB-only boxes sit in the wrong place, which shows the distance and size error that depth removes. Object names are shown for illustration only; scoring ignores them.

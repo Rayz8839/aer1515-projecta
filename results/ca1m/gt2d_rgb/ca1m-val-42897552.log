@@ -1,0 +1,220 @@
+Namespace(input='ca1m-val-42897552', skip_n=1, start_n=1, max_n=99999, pinhole=False, camera='rgb', detector='owl', thresh2d=0.25, thresh3d=0.5, labels=['lvisplus'], detector_hw=960, write_name='boxer', skip_viz=True, cache2d=False, cache3d=False, no_sdp=True, no_csv=False, force_cpu=False, gt2d=True, fuse=True, track=False, ckpt='boxer/ckpts/boxernet_hw960in2x6d768-c88128f8.ckpt', force_precision=None, output_dir='results/ca1m/gt2d_rgb', viz_headless=False)
+==> Created output folder results/ca1m/gt2d_rgb/ca1m-val-42897552
+==> filtering out: wall: 26
+Found 153 frames in boxer/sample_data/ca1m-val-42897552/42897552
+==> Using device cuda
+Loading checkpoint from "boxer/ckpts/boxernet_hw960in2x6d768-c88128f8.ckpt"
+==> Loaded checkpoint: 320/320 tensors, 85.81M/85.81M params (100.0%)
+==> Will resize images to 960x960 for boxernet
+==================================================
+  BOXERNET ARCHITECTURE (85.80M params)
+==================================================
+  dino: DinoV3Wrapper (28.70M)
+  head: AleHead (0.12M)
+  input2emb: Linear (0.30M)
+  query2emb: Linear (0.00M)
+  self_attn: AttentionBlockV2 (14.17M)
+  cross_attn: AttentionBlockV2 (42.51M)
+==================================================
+BoxerNet:   0%|          | 0/153 [00:00<?, ?it/s]BoxerNet:   0%|          | 0/153 [00:01<?, ?it/s, 22 2D, 22 3D | load:39ms owl:2ms boxer:1238ms csv:1ms]BoxerNet:   1%|          | 1/153 [00:01<03:15,  1.29s/it, 22 2D, 22 3D | load:39ms owl:2ms boxer:1238ms csv:1ms]BoxerNet:   1%|          | 1/153 [00:01<03:15,  1.29s/it, 21 2D, 21 3D | load:5ms owl:2ms boxer:26ms csv:1ms]   BoxerNet:   1%|          | 1/153 [00:01<03:15,  1.29s/it, 22 2D, 22 3D | load:20ms owl:2ms boxer:26ms csv:1ms]BoxerNet:   1%|          | 1/153 [00:01<03:15,  1.29s/it, 20 2D, 20 3D | load:22ms owl:2ms boxer:52ms csv:1ms]BoxerNet:   3%|▎         | 4/153 [00:01<00:42,  3.48it/s, 20 2D, 20 3D | load:22ms owl:2ms boxer:52ms csv:1ms]BoxerNet:   3%|▎         | 4/153 [00:01<00:42,  3.48it/s, 18 2D, 17 3D | load:3ms owl:2ms boxer:43ms csv:1ms] BoxerNet:   3%|▎         | 4/153 [00:01<00:42,  3.48it/s, 17 2D, 16 3D | load:3ms owl:2ms boxer:41ms csv:5ms]BoxerNet:   3%|▎         | 4/153 [00:01<00:42,  3.48it/s, 16 2D, 16 3D | load:4ms owl:1ms boxer:26ms csv:1ms]BoxerNet:   5%|▍         | 7/153 [00:01<00:22,  6.38it/s, 16 2D, 16 3D | load:4ms owl:1ms boxer:26ms csv:1ms]BoxerNet:   5%|▍         | 7/153 [00:01<00:22,  6.38it/s, 13 2D, 12 3D | load:39ms owl:1ms boxer:45ms csv:1ms]BoxerNet:   5%|▍         | 7/153 [00:01<00:22,  6.38it/s, 11 2D, 8 3D | load:3ms owl:1ms boxer:29ms csv:1ms]  BoxerNet:   6%|▌         | 9/153 [00:01<00:17,  8.05it/s, 11 2D, 8 3D | load:3ms owl:1ms boxer:29ms csv:1ms]BoxerNet:   6%|▌         | 9/153 [00:01<00:17,  8.05it/s, 8 2D, 8 3D | load:25ms owl:1ms boxer:37ms csv:4ms]BoxerNet:   6%|▌         | 9/153 [00:01<00:17,  8.05it/s, 12 2D, 11 3D | load:6ms owl:1ms boxer:46ms csv:1ms]BoxerNet:   7%|▋         | 11/153 [00:01<00:14,  9.66it/s, 12 2D, 11 3D | load:6ms owl:1ms boxer:46ms csv:1ms]BoxerNet:   7%|▋         | 11/153 [00:01<00:14,  9.66it/s, 15 2D, 14 3D | load:3ms owl:2ms boxer:28ms csv:1ms]BoxerNet:   7%|▋         | 11/153 [00:01<00:14,  9.66it/s, 17 2D, 16 3D | load:26ms owl:2ms boxer:27ms csv:1ms]BoxerNet:   7%|▋         | 11/153 [00:01<00:14,  9.66it/s, 20 2D, 20 3D | load:26ms owl:2ms boxer:44ms csv:1ms]BoxerNet:   9%|▉         | 14/153 [00:01<00:11, 11.99it/s, 20 2D, 20 3D | load:26ms owl:2ms boxer:44ms csv:1ms]BoxerNet:   9%|▉         | 14/153 [00:02<00:11, 11.99it/s, 20 2D, 20 3D | load:3ms owl:2ms boxer:49ms csv:1ms] BoxerNet:   9%|▉         | 14/153 [00:02<00:11, 11.99it/s, 20 2D, 19 3D | load:3ms owl:2ms boxer:27ms csv:1ms]BoxerNet:   9%|▉         | 14/153 [00:02<00:11, 11.99it/s, 18 2D, 18 3D | load:23ms owl:2ms boxer:39ms csv:1ms]BoxerNet:  11%|█         | 17/153 [00:02<00:09, 13.99it/s, 18 2D, 18 3D | load:23ms owl:2ms boxer:39ms csv:1ms]BoxerNet:  11%|█         | 17/153 [00:02<00:09, 13.99it/s, 19 2D, 18 3D | load:3ms owl:2ms boxer:42ms csv:1ms] BoxerNet:  11%|█         | 17/153 [00:02<00:09, 13.99it/s, 21 2D, 20 3D | load:3ms owl:2ms boxer:43ms csv:1ms]BoxerNet:  11%|█         | 17/153 [00:02<00:09, 13.99it/s, 20 2D, 19 3D | load:5ms owl:2ms boxer:25ms csv:3ms]BoxerNet:  13%|█▎        | 20/153 [00:02<00:08, 16.11it/s, 20 2D, 19 3D | load:5ms owl:2ms boxer:25ms csv:3ms]BoxerNet:  13%|█▎        | 20/153 [00:02<00:08, 16.11it/s, 19 2D, 18 3D | load:24ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  13%|█▎        | 20/153 [00:02<00:08, 16.11it/s, 16 2D, 16 3D | load:3ms owl:2ms boxer:39ms csv:1ms] BoxerNet:  14%|█▍        | 22/153 [00:02<00:07, 16.44it/s, 16 2D, 16 3D | load:3ms owl:2ms boxer:39ms csv:1ms]BoxerNet:  14%|█▍        | 22/153 [00:02<00:07, 16.44it/s, 14 2D, 13 3D | load:3ms owl:1ms boxer:42ms csv:1ms]BoxerNet:  14%|█▍        | 22/153 [00:02<00:07, 16.44it/s, 13 2D, 13 3D | load:3ms owl:1ms boxer:63ms csv:1ms]BoxerNet:  16%|█▌        | 24/153 [00:02<00:07, 16.63it/s, 13 2D, 13 3D | load:3ms owl:1ms boxer:63ms csv:1ms]BoxerNet:  16%|█▌        | 24/153 [00:02<00:07, 16.63it/s, 11 2D, 7 3D | load:3ms owl:1ms boxer:39ms csv:1ms] BoxerNet:  16%|█▌        | 24/153 [00:02<00:07, 16.63it/s, 4 2D, 1 3D | load:3ms owl:1ms boxer:37ms csv:0ms] BoxerNet:  16%|█▌        | 24/153 [00:02<00:07, 16.63it/s, 3 2D, 1 3D | load:3ms owl:0ms boxer:38ms csv:1ms]BoxerNet:  18%|█▊        | 27/153 [00:02<00:06, 18.55it/s, 3 2D, 1 3D | load:3ms owl:0ms boxer:38ms csv:1ms]BoxerNet:  18%|█▊        | 27/153 [00:02<00:06, 18.55it/s, 2 2D, 1 3D | load:3ms owl:0ms boxer:38ms csv:3ms]BoxerNet:  18%|█▊        | 27/153 [00:02<00:06, 18.55it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:39ms csv:1ms]BoxerNet:  18%|█▊        | 27/153 [00:02<00:06, 18.55it/s, 1 2D, 1 3D | load:3ms owl:1ms boxer:46ms csv:1ms]BoxerNet:  20%|█▉        | 30/153 [00:02<00:06, 19.47it/s, 1 2D, 1 3D | load:3ms owl:1ms boxer:46ms csv:1ms]BoxerNet:  20%|█▉        | 30/153 [00:02<00:06, 19.47it/s, 1 2D, 0 3D | load:3ms owl:0ms boxer:40ms csv:0ms]BoxerNet:  20%|█▉        | 30/153 [00:02<00:06, 19.47it/s, 1 2D, 0 3D | load:3ms owl:0ms boxer:37ms csv:1ms]BoxerNet:  20%|█▉        | 30/153 [00:02<00:06, 19.47it/s, 1 2D, 0 3D | load:4ms owl:0ms boxer:26ms csv:0ms]BoxerNet:  22%|██▏       | 33/153 [00:02<00:05, 21.13it/s, 1 2D, 0 3D | load:4ms owl:0ms boxer:26ms csv:0ms]BoxerNet:  22%|██▏       | 33/153 [00:02<00:05, 21.13it/s, 1 2D, 1 3D | load:35ms owl:0ms boxer:52ms csv:0ms]BoxerNet:  22%|██▏       | 33/153 [00:03<00:05, 21.13it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:42ms csv:1ms] BoxerNet:  22%|██▏       | 33/153 [00:03<00:05, 21.13it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:57ms csv:0ms]BoxerNet:  24%|██▎       | 36/153 [00:03<00:06, 18.82it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:57ms csv:0ms]BoxerNet:  24%|██▎       | 36/153 [00:03<00:06, 18.82it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:35ms csv:1ms]BoxerNet:  24%|██▎       | 36/153 [00:03<00:06, 18.82it/s, 1 2D, 1 3D | load:4ms owl:0ms boxer:40ms csv:0ms]BoxerNet:  24%|██▎       | 36/153 [00:03<00:06, 18.82it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:33ms csv:8ms]BoxerNet:  25%|██▌       | 39/153 [00:03<00:05, 20.05it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:33ms csv:8ms]BoxerNet:  25%|██▌       | 39/153 [00:03<00:05, 20.05it/s, 1 2D, 1 3D | load:10ms owl:0ms boxer:25ms csv:1ms]BoxerNet:  25%|██▌       | 39/153 [00:03<00:05, 20.05it/s, 1 2D, 1 3D | load:20ms owl:0ms boxer:26ms csv:0ms]BoxerNet:  25%|██▌       | 39/153 [00:03<00:05, 20.05it/s, 1 2D, 1 3D | load:18ms owl:0ms boxer:53ms csv:1ms]BoxerNet:  27%|██▋       | 42/153 [00:03<00:05, 19.74it/s, 1 2D, 1 3D | load:18ms owl:0ms boxer:53ms csv:1ms]BoxerNet:  27%|██▋       | 42/153 [00:03<00:05, 19.74it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:43ms csv:1ms] BoxerNet:  27%|██▋       | 42/153 [00:03<00:05, 19.74it/s, 1 2D, 1 3D | load:8ms owl:0ms boxer:49ms csv:1ms]BoxerNet:  27%|██▋       | 42/153 [00:03<00:05, 19.74it/s, 2 2D, 1 3D | load:3ms owl:1ms boxer:45ms csv:1ms]BoxerNet:  29%|██▉       | 45/153 [00:03<00:05, 19.53it/s, 2 2D, 1 3D | load:3ms owl:1ms boxer:45ms csv:1ms]BoxerNet:  29%|██▉       | 45/153 [00:03<00:05, 19.53it/s, 3 2D, 1 3D | load:3ms owl:1ms boxer:25ms csv:8ms]BoxerNet:  29%|██▉       | 45/153 [00:03<00:05, 19.53it/s, 3 2D, 2 3D | load:10ms owl:1ms boxer:38ms csv:1ms]BoxerNet:  29%|██▉       | 45/153 [00:03<00:05, 19.53it/s, 3 2D, 1 3D | load:3ms owl:0ms boxer:42ms csv:0ms] BoxerNet:  31%|███▏      | 48/153 [00:03<00:05, 20.36it/s, 3 2D, 1 3D | load:3ms owl:0ms boxer:42ms csv:0ms]BoxerNet:  31%|███▏      | 48/153 [00:03<00:05, 20.36it/s, 2 2D, 1 3D | load:3ms owl:0ms boxer:36ms csv:0ms]BoxerNet:  31%|███▏      | 48/153 [00:03<00:05, 20.36it/s, 1 2D, 0 3D | load:4ms owl:1ms boxer:47ms csv:0ms]BoxerNet:  31%|███▏      | 48/153 [00:03<00:05, 20.36it/s, 2 2D, 0 3D | load:3ms owl:0ms boxer:58ms csv:0ms]BoxerNet:  33%|███▎      | 51/153 [00:03<00:05, 20.08it/s, 2 2D, 0 3D | load:3ms owl:0ms boxer:58ms csv:0ms]BoxerNet:  33%|███▎      | 51/153 [00:03<00:05, 20.08it/s, 2 2D, 0 3D | load:3ms owl:0ms boxer:26ms csv:0ms]BoxerNet:  33%|███▎      | 51/153 [00:03<00:05, 20.08it/s, 2 2D, 0 3D | load:18ms owl:0ms boxer:50ms csv:0ms]BoxerNet:  33%|███▎      | 51/153 [00:03<00:05, 20.08it/s, 2 2D, 2 3D | load:3ms owl:0ms boxer:47ms csv:0ms] BoxerNet:  35%|███▌      | 54/153 [00:03<00:04, 20.00it/s, 2 2D, 2 3D | load:3ms owl:0ms boxer:47ms csv:0ms]BoxerNet:  35%|███▌      | 54/153 [00:04<00:04, 20.00it/s, 2 2D, 1 3D | load:3ms owl:0ms boxer:39ms csv:0ms]BoxerNet:  35%|███▌      | 54/153 [00:04<00:04, 20.00it/s, 2 2D, 2 3D | load:3ms owl:0ms boxer:36ms csv:1ms]BoxerNet:  35%|███▌      | 54/153 [00:04<00:04, 20.00it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:26ms csv:3ms]BoxerNet:  37%|███▋      | 57/153 [00:04<00:04, 21.47it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:26ms csv:3ms]BoxerNet:  37%|███▋      | 57/153 [00:04<00:04, 21.47it/s, 1 2D, 1 3D | load:19ms owl:0ms boxer:37ms csv:1ms]BoxerNet:  37%|███▋      | 57/153 [00:04<00:04, 21.47it/s, 1 2D, 0 3D | load:3ms owl:0ms boxer:31ms csv:0ms] BoxerNet:  37%|███▋      | 57/153 [00:04<00:04, 21.47it/s, 1 2D, 0 3D | load:18ms owl:0ms boxer:39ms csv:0ms]BoxerNet:  39%|███▉      | 60/153 [00:04<00:04, 20.96it/s, 1 2D, 0 3D | load:18ms owl:0ms boxer:39ms csv:0ms]BoxerNet:  39%|███▉      | 60/153 [00:04<00:04, 20.96it/s, 1 2D, 1 3D | load:5ms owl:0ms boxer:38ms csv:0ms] BoxerNet:  39%|███▉      | 60/153 [00:04<00:04, 20.96it/s, 0 valid bb2d | load:3ms owl:0ms]                 BoxerNet:  39%|███▉      | 60/153 [00:04<00:04, 20.96it/s, 0 valid bb2d | load:31ms owl:0ms]BoxerNet:  39%|███▉      | 60/153 [00:04<00:04, 20.96it/s, 1 2D, 1 3D | load:31ms owl:0ms boxer:37ms csv:4ms]BoxerNet:  42%|████▏     | 64/153 [00:04<00:03, 22.61it/s, 1 2D, 1 3D | load:31ms owl:0ms boxer:37ms csv:4ms]BoxerNet:  42%|████▏     | 64/153 [00:04<00:03, 22.61it/s, 0 valid bb2d | load:4ms owl:0ms]                  BoxerNet:  42%|████▏     | 64/153 [00:04<00:03, 22.61it/s, 1 2D, 1 3D | load:32ms owl:0ms boxer:50ms csv:1ms]BoxerNet:  42%|████▏     | 64/153 [00:04<00:03, 22.61it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:56ms csv:1ms] BoxerNet:  44%|████▍     | 67/153 [00:04<00:03, 21.83it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:56ms csv:1ms]BoxerNet:  44%|████▍     | 67/153 [00:04<00:03, 21.83it/s, 1 2D, 1 3D | load:3ms owl:0ms boxer:26ms csv:8ms]BoxerNet:  44%|████▍     | 67/153 [00:04<00:03, 21.83it/s, 0 valid bb2d | load:9ms owl:0ms]                 BoxerNet:  44%|████▍     | 67/153 [00:04<00:03, 21.83it/s, 1 2D, 1 3D | load:31ms owl:0ms boxer:49ms csv:0ms]BoxerNet:  46%|████▌     | 70/153 [00:04<00:03, 22.21it/s, 1 2D, 1 3D | load:31ms owl:0ms boxer:49ms csv:0ms]BoxerNet:  46%|████▌     | 70/153 [00:04<00:03, 22.21it/s, 2 2D, 2 3D | load:3ms owl:1ms boxer:40ms csv:0ms] BoxerNet:  46%|████▌     | 70/153 [00:04<00:03, 22.21it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:40ms csv:0ms]BoxerNet:  46%|████▌     | 70/153 [00:04<00:03, 22.21it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:44ms csv:1ms]BoxerNet:  48%|████▊     | 73/153 [00:04<00:03, 22.10it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:44ms csv:1ms]BoxerNet:  48%|████▊     | 73/153 [00:04<00:03, 22.10it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:49ms csv:1ms]BoxerNet:  48%|████▊     | 73/153 [00:04<00:03, 22.10it/s, 3 2D, 3 3D | load:3ms owl:1ms boxer:41ms csv:0ms]BoxerNet:  48%|████▊     | 73/153 [00:04<00:03, 22.10it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:49ms csv:1ms]BoxerNet:  50%|████▉     | 76/153 [00:04<00:03, 21.32it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:49ms csv:1ms]BoxerNet:  50%|████▉     | 76/153 [00:05<00:03, 21.32it/s, 3 2D, 3 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  50%|████▉     | 76/153 [00:05<00:03, 21.32it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:39ms csv:0ms]BoxerNet:  50%|████▉     | 76/153 [00:05<00:03, 21.32it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:36ms csv:1ms]BoxerNet:  52%|█████▏    | 79/153 [00:05<00:03, 21.81it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:36ms csv:1ms]BoxerNet:  52%|█████▏    | 79/153 [00:05<00:03, 21.81it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:40ms csv:1ms]BoxerNet:  52%|█████▏    | 79/153 [00:05<00:03, 21.81it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:41ms csv:1ms]BoxerNet:  52%|█████▏    | 79/153 [00:05<00:03, 21.81it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:48ms csv:1ms]BoxerNet:  54%|█████▎    | 82/153 [00:05<00:03, 21.47it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:48ms csv:1ms]BoxerNet:  54%|█████▎    | 82/153 [00:05<00:03, 21.47it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:40ms csv:1ms]BoxerNet:  54%|█████▎    | 82/153 [00:05<00:03, 21.47it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:48ms csv:1ms]BoxerNet:  54%|█████▎    | 82/153 [00:05<00:03, 21.47it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  56%|█████▌    | 85/153 [00:05<00:03, 21.29it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  56%|█████▌    | 85/153 [00:05<00:03, 21.29it/s, 4 2D, 4 3D | load:4ms owl:1ms boxer:50ms csv:1ms]BoxerNet:  56%|█████▌    | 85/153 [00:05<00:03, 21.29it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  56%|█████▌    | 85/153 [00:05<00:03, 21.29it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:40ms csv:4ms]BoxerNet:  58%|█████▊    | 88/153 [00:05<00:03, 20.93it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:40ms csv:4ms]BoxerNet:  58%|█████▊    | 88/153 [00:05<00:03, 20.93it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  58%|█████▊    | 88/153 [00:05<00:03, 20.93it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:44ms csv:1ms]BoxerNet:  58%|█████▊    | 88/153 [00:05<00:03, 20.93it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:43ms csv:1ms]BoxerNet:  59%|█████▉    | 91/153 [00:05<00:02, 20.88it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:43ms csv:1ms]BoxerNet:  59%|█████▉    | 91/153 [00:05<00:02, 20.88it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:36ms csv:4ms]BoxerNet:  59%|█████▉    | 91/153 [00:05<00:02, 20.88it/s, 4 2D, 4 3D | load:5ms owl:1ms boxer:39ms csv:1ms]BoxerNet:  59%|█████▉    | 91/153 [00:05<00:02, 20.88it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:40ms csv:1ms]BoxerNet:  61%|██████▏   | 94/153 [00:05<00:02, 21.25it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:40ms csv:1ms]BoxerNet:  61%|██████▏   | 94/153 [00:05<00:02, 21.25it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:47ms csv:1ms]BoxerNet:  61%|██████▏   | 94/153 [00:05<00:02, 21.25it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:45ms csv:0ms]BoxerNet:  61%|██████▏   | 94/153 [00:05<00:02, 21.25it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:52ms csv:1ms]BoxerNet:  63%|██████▎   | 97/153 [00:05<00:02, 20.48it/s, 3 2D, 3 3D | load:3ms owl:0ms boxer:52ms csv:1ms]BoxerNet:  63%|██████▎   | 97/153 [00:06<00:02, 20.48it/s, 3 2D, 3 3D | load:3ms owl:1ms boxer:44ms csv:4ms]BoxerNet:  63%|██████▎   | 97/153 [00:06<00:02, 20.48it/s, 2 2D, 2 3D | load:4ms owl:0ms boxer:29ms csv:1ms]BoxerNet:  63%|██████▎   | 97/153 [00:06<00:02, 20.48it/s, 1 2D, 1 3D | load:17ms owl:0ms boxer:37ms csv:1ms]BoxerNet:  65%|██████▌   | 100/153 [00:06<00:02, 20.63it/s, 1 2D, 1 3D | load:17ms owl:0ms boxer:37ms csv:1ms]BoxerNet:  65%|██████▌   | 100/153 [00:06<00:02, 20.63it/s, 2 2D, 2 3D | load:3ms owl:0ms boxer:44ms csv:0ms] BoxerNet:  65%|██████▌   | 100/153 [00:06<00:02, 20.63it/s, 2 2D, 2 3D | load:3ms owl:0ms boxer:43ms csv:1ms]BoxerNet:  65%|██████▌   | 100/153 [00:06<00:02, 20.63it/s, 3 2D, 3 3D | load:3ms owl:1ms boxer:42ms csv:1ms]BoxerNet:  67%|██████▋   | 103/153 [00:06<00:02, 20.73it/s, 3 2D, 3 3D | load:3ms owl:1ms boxer:42ms csv:1ms]BoxerNet:  67%|██████▋   | 103/153 [00:06<00:02, 20.73it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:38ms csv:1ms]BoxerNet:  67%|██████▋   | 103/153 [00:06<00:02, 20.73it/s, 7 2D, 7 3D | load:3ms owl:1ms boxer:46ms csv:1ms]BoxerNet:  67%|██████▋   | 103/153 [00:06<00:02, 20.73it/s, 10 2D, 10 3D | load:3ms owl:1ms boxer:45ms csv:1ms]BoxerNet:  69%|██████▉   | 106/153 [00:06<00:02, 20.77it/s, 10 2D, 10 3D | load:3ms owl:1ms boxer:45ms csv:1ms]BoxerNet:  69%|██████▉   | 106/153 [00:06<00:02, 20.77it/s, 10 2D, 10 3D | load:3ms owl:1ms boxer:43ms csv:1ms]BoxerNet:  69%|██████▉   | 106/153 [00:06<00:02, 20.77it/s, 10 2D, 10 3D | load:3ms owl:1ms boxer:34ms csv:1ms]BoxerNet:  69%|██████▉   | 106/153 [00:06<00:02, 20.77it/s, 11 2D, 11 3D | load:8ms owl:1ms boxer:52ms csv:1ms]BoxerNet:  71%|███████   | 109/153 [00:06<00:02, 20.47it/s, 11 2D, 11 3D | load:8ms owl:1ms boxer:52ms csv:1ms]BoxerNet:  71%|███████   | 109/153 [00:06<00:02, 20.47it/s, 11 2D, 11 3D | load:3ms owl:1ms boxer:53ms csv:1ms]BoxerNet:  71%|███████   | 109/153 [00:06<00:02, 20.47it/s, 11 2D, 11 3D | load:3ms owl:1ms boxer:40ms csv:1ms]BoxerNet:  71%|███████   | 109/153 [00:06<00:02, 20.47it/s, 11 2D, 11 3D | load:3ms owl:1ms boxer:39ms csv:1ms]BoxerNet:  73%|███████▎  | 112/153 [00:06<00:02, 20.35it/s, 11 2D, 11 3D | load:3ms owl:1ms boxer:39ms csv:1ms]BoxerNet:  73%|███████▎  | 112/153 [00:06<00:02, 20.35it/s, 8 2D, 8 3D | load:3ms owl:1ms boxer:47ms csv:1ms]  BoxerNet:  73%|███████▎  | 112/153 [00:06<00:02, 20.35it/s, 9 2D, 9 3D | load:3ms owl:1ms boxer:41ms csv:3ms]BoxerNet:  73%|███████▎  | 112/153 [00:06<00:02, 20.35it/s, 10 2D, 10 3D | load:5ms owl:1ms boxer:26ms csv:2ms]BoxerNet:  75%|███████▌  | 115/153 [00:06<00:01, 20.79it/s, 10 2D, 10 3D | load:5ms owl:1ms boxer:26ms csv:2ms]BoxerNet:  75%|███████▌  | 115/153 [00:06<00:01, 20.79it/s, 19 2D, 19 3D | load:22ms owl:2ms boxer:50ms csv:1ms]BoxerNet:  75%|███████▌  | 115/153 [00:06<00:01, 20.79it/s, 26 2D, 26 3D | load:5ms owl:2ms boxer:44ms csv:1ms] BoxerNet:  75%|███████▌  | 115/153 [00:07<00:01, 20.79it/s, 24 2D, 24 3D | load:5ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  77%|███████▋  | 118/153 [00:07<00:01, 19.43it/s, 24 2D, 24 3D | load:5ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  77%|███████▋  | 118/153 [00:07<00:01, 19.43it/s, 24 2D, 24 3D | load:5ms owl:2ms boxer:48ms csv:1ms]BoxerNet:  77%|███████▋  | 118/153 [00:07<00:01, 19.43it/s, 24 2D, 24 3D | load:5ms owl:2ms boxer:29ms csv:1ms]BoxerNet:  77%|███████▋  | 118/153 [00:07<00:01, 19.43it/s, 24 2D, 24 3D | load:21ms owl:2ms boxer:47ms csv:1ms]BoxerNet:  79%|███████▉  | 121/153 [00:07<00:01, 18.98it/s, 24 2D, 24 3D | load:21ms owl:2ms boxer:47ms csv:1ms]BoxerNet:  79%|███████▉  | 121/153 [00:07<00:01, 18.98it/s, 21 2D, 21 3D | load:4ms owl:2ms boxer:48ms csv:1ms] BoxerNet:  79%|███████▉  | 121/153 [00:07<00:01, 18.98it/s, 21 2D, 21 3D | load:5ms owl:2ms boxer:49ms csv:1ms]BoxerNet:  80%|████████  | 123/153 [00:07<00:01, 18.64it/s, 21 2D, 21 3D | load:5ms owl:2ms boxer:49ms csv:1ms]BoxerNet:  80%|████████  | 123/153 [00:07<00:01, 18.64it/s, 21 2D, 21 3D | load:5ms owl:3ms boxer:51ms csv:1ms]BoxerNet:  80%|████████  | 123/153 [00:07<00:01, 18.64it/s, 22 2D, 22 3D | load:4ms owl:2ms boxer:44ms csv:1ms]BoxerNet:  82%|████████▏ | 125/153 [00:07<00:01, 18.42it/s, 22 2D, 22 3D | load:4ms owl:2ms boxer:44ms csv:1ms]BoxerNet:  82%|████████▏ | 125/153 [00:07<00:01, 18.42it/s, 24 2D, 24 3D | load:3ms owl:2ms boxer:35ms csv:4ms]BoxerNet:  82%|████████▏ | 125/153 [00:07<00:01, 18.42it/s, 23 2D, 23 3D | load:8ms owl:2ms boxer:27ms csv:9ms]BoxerNet:  82%|████████▏ | 125/153 [00:07<00:01, 18.42it/s, 17 2D, 17 3D | load:10ms owl:2ms boxer:41ms csv:1ms]BoxerNet:  84%|████████▎ | 128/153 [00:07<00:01, 19.12it/s, 17 2D, 17 3D | load:10ms owl:2ms boxer:41ms csv:1ms]BoxerNet:  84%|████████▎ | 128/153 [00:07<00:01, 19.12it/s, 16 2D, 16 3D | load:4ms owl:2ms boxer:54ms csv:1ms] BoxerNet:  84%|████████▎ | 128/153 [00:07<00:01, 19.12it/s, 7 2D, 7 3D | load:3ms owl:1ms boxer:31ms csv:1ms]  BoxerNet:  84%|████████▎ | 128/153 [00:07<00:01, 19.12it/s, 6 2D, 6 3D | load:8ms owl:1ms boxer:46ms csv:1ms]BoxerNet:  86%|████████▌ | 131/153 [00:07<00:01, 19.24it/s, 6 2D, 6 3D | load:8ms owl:1ms boxer:46ms csv:1ms]BoxerNet:  86%|████████▌ | 131/153 [00:07<00:01, 19.24it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:44ms csv:1ms]BoxerNet:  86%|████████▌ | 131/153 [00:07<00:01, 19.24it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:42ms csv:2ms]BoxerNet:  86%|████████▌ | 131/153 [00:07<00:01, 19.24it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:42ms csv:0ms]BoxerNet:  88%|████████▊ | 134/153 [00:07<00:00, 19.70it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:42ms csv:0ms]BoxerNet:  88%|████████▊ | 134/153 [00:07<00:00, 19.70it/s, 4 2D, 4 3D | load:3ms owl:0ms boxer:25ms csv:1ms]BoxerNet:  88%|████████▊ | 134/153 [00:07<00:00, 19.70it/s, 4 2D, 4 3D | load:26ms owl:1ms boxer:49ms csv:1ms]BoxerNet:  89%|████████▉ | 136/153 [00:07<00:00, 19.45it/s, 4 2D, 4 3D | load:26ms owl:1ms boxer:49ms csv:1ms]BoxerNet:  89%|████████▉ | 136/153 [00:08<00:00, 19.45it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:44ms csv:1ms] BoxerNet:  89%|████████▉ | 136/153 [00:08<00:00, 19.45it/s, 4 2D, 4 3D | load:3ms owl:1ms boxer:41ms csv:1ms]BoxerNet:  89%|████████▉ | 136/153 [00:08<00:00, 19.45it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:42ms csv:1ms]BoxerNet:  91%|█████████ | 139/153 [00:08<00:00, 19.99it/s, 6 2D, 6 3D | load:3ms owl:1ms boxer:42ms csv:1ms]BoxerNet:  91%|█████████ | 139/153 [00:08<00:00, 19.99it/s, 5 2D, 5 3D | load:3ms owl:1ms boxer:40ms csv:3ms]BoxerNet:  91%|█████████ | 139/153 [00:08<00:00, 19.99it/s, 8 2D, 8 3D | load:3ms owl:1ms boxer:44ms csv:1ms]BoxerNet:  91%|█████████ | 139/153 [00:08<00:00, 19.99it/s, 13 2D, 13 3D | load:3ms owl:1ms boxer:47ms csv:3ms]BoxerNet:  93%|█████████▎| 142/153 [00:08<00:00, 19.87it/s, 13 2D, 13 3D | load:3ms owl:1ms boxer:47ms csv:3ms]BoxerNet:  93%|█████████▎| 142/153 [00:08<00:00, 19.87it/s, 16 2D, 16 3D | load:4ms owl:2ms boxer:29ms csv:1ms]BoxerNet:  93%|█████████▎| 142/153 [00:08<00:00, 19.87it/s, 20 2D, 20 3D | load:21ms owl:2ms boxer:48ms csv:1ms]BoxerNet:  94%|█████████▍| 144/153 [00:08<00:00, 19.56it/s, 20 2D, 20 3D | load:21ms owl:2ms boxer:48ms csv:1ms]BoxerNet:  94%|█████████▍| 144/153 [00:08<00:00, 19.56it/s, 20 2D, 18 3D | load:5ms owl:2ms boxer:46ms csv:5ms] BoxerNet:  94%|█████████▍| 144/153 [00:08<00:00, 19.56it/s, 20 2D, 18 3D | load:5ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  95%|█████████▌| 146/153 [00:08<00:00, 19.31it/s, 20 2D, 18 3D | load:5ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  95%|█████████▌| 146/153 [00:08<00:00, 19.31it/s, 18 2D, 16 3D | load:3ms owl:2ms boxer:53ms csv:1ms]BoxerNet:  95%|█████████▌| 146/153 [00:08<00:00, 19.31it/s, 17 2D, 17 3D | load:3ms owl:2ms boxer:40ms csv:1ms]BoxerNet:  97%|█████████▋| 148/153 [00:08<00:00, 19.16it/s, 17 2D, 17 3D | load:3ms owl:2ms boxer:40ms csv:1ms]BoxerNet:  97%|█████████▋| 148/153 [00:08<00:00, 19.16it/s, 19 2D, 18 3D | load:3ms owl:2ms boxer:54ms csv:1ms]BoxerNet:  97%|█████████▋| 148/153 [00:08<00:00, 19.16it/s, 15 2D, 15 3D | load:3ms owl:1ms boxer:48ms csv:2ms]BoxerNet:  98%|█████████▊| 150/153 [00:08<00:00, 18.64it/s, 15 2D, 15 3D | load:3ms owl:1ms boxer:48ms csv:2ms]BoxerNet:  98%|█████████▊| 150/153 [00:08<00:00, 18.64it/s, 17 2D, 17 3D | load:4ms owl:2ms boxer:42ms csv:1ms]BoxerNet:  98%|█████████▊| 150/153 [00:08<00:00, 18.64it/s, 18 2D, 18 3D | load:3ms owl:2ms boxer:24ms csv:1ms]BoxerNet:  98%|█████████▊| 150/153 [00:08<00:00, 18.64it/s, 15 2D, 15 3D | load:24ms owl:1ms boxer:26ms csv:1ms]BoxerNet: 100%|██████████| 153/153 [00:08<00:00, 20.06it/s, 15 2D, 15 3D | load:24ms owl:1ms boxer:26ms csv:1ms]BoxerNet: 100%|██████████| 153/153 [00:08<00:00, 17.36it/s, 15 2D, 15 3D | load:24ms owl:1ms boxer:26ms csv:1ms]
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Removing SDP inputs
+==> Saved 3D BBs to results/ca1m/gt2d_rgb/ca1m-val-42897552/boxer_3dbbs.csv
+==> Saved 2D BBs to results/ca1m/gt2d_rgb/ca1m-val-42897552/owl_2dbbs.csv
+
+==> Running fusion on results/ca1m/gt2d_rgb/ca1m-val-42897552/boxer_3dbbs.csv
+==> Loading OBBs from results/ca1m/gt2d_rgb/ca1m-val-42897552/boxer_3dbbs.csv
+==> Loaded 1240 OBBs from 140 timestamps
+
+============================================================
+FUSING 1240 OBBs
+============================================================
+Filtered 114 detections below conf_threshold=0.55 (1240 -> 1126)
+
+============================================================
+FUSION PERFORMANCE BREAKDOWN (1126 detections)
+============================================================
+
+[1/4] Computing 3D IoU matrix...
+
+[IoU MC2D] Computing for 1126x1126 = 1,267,876 box pairs
+  [IoU MC2D] Distance check: 0.046s
+  [IoU MC2D] Eliminated 1,171,828/1,267,876 pairs (92.4%)
+  [IoU MC2D] Computing IoU for 96,048 candidate pairs...
+  [IoU MC2D] 2D sampling: 0.003s (64 samples/box)
+  [IoU MC2D] Compute: 0.031s, Total: 0.281s
+  ✓ IoU matrix: 0.281s
+
+[2/4] Clustering detections...
+Found 252 clusters from similarity graph
+  ✓ Found 252 clusters: 0.004s
+
+[3/4] Fusing clusters...
+  ✓ Fused 252 instances: 0.335s
+
+[4/4] Filtering by minimum detections...
+  ✓ 66 instances after filtering: 0.000s
+
+============================================================
+TIMING SUMMARY:
+  1. IoU computation:      0.281s ( 45.3%)
+  2. Clustering:           0.004s (  0.6%)
+  3. Fusion:               0.335s ( 54.0%)
+  4. Filtering:            0.000s (  0.0%)
+  ----------------------------------
+  TOTAL:                   0.620s
+============================================================
+
+==> Fused into 66 static instances
+==> Saved 66 fused OBBs to results/ca1m/gt2d_rgb/ca1m-val-42897552/boxer_3dbbs_fused.csv

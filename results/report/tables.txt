@@ -1,0 +1,34 @@
+TABLE A. Class-agnostic 3D mAP on CA-1M (10 validation sequences)
+
+Configuration               per-frame   paper  per-scene   paper
+OWLv2 boxes + depth             0.216   0.204      0.288   0.204
+OWLv2 boxes RGB only            0.100   0.081      0.095   0.081
+True 2D boxes + depth           0.450   0.412      0.404   0.434
+True 2D boxes RGB only          0.157   0.126      0.116   0.089
+
+TABLE B. Per-frame mAP by object size (GT volume)
+
+Configuration                  all   small  medium   large  AP@0.25
+OWLv2 boxes + depth          0.216   0.096   0.296   0.388    0.230
+OWLv2 boxes RGB only         0.100   0.027   0.125   0.277    0.095
+True 2D boxes + depth        0.450   0.388   0.566   0.625    0.494
+True 2D boxes RGB only       0.157   0.080   0.218   0.452    0.151
+
+GT objects counted per frame (summed over frames): small 28,797, medium 18,375, large 18,047
+
+TABLE C. Runtime on one RTX 5080 (16 GB), all frames, every sequence
+
+Sequence             frames   owl_rgbd    owl_rgb  gt2d_rgbd   gt2d_rgb
+ca1m-val-42897521       565        43s         29s         29s         29s
+ca1m-val-42897545       334        24s         17s         19s         17s
+ca1m-val-42897552       153        12s          8s          9s          8s
+ca1m-val-45261133      1431       109s         74s         75s         74s
+ca1m-val-45261143       659        48s         33s         35s         33s
+ca1m-val-45261179       279        23s         15s         15s         15s
+ca1m-val-45261615       517        40s         27s         28s         27s
+ca1m-val-45662921      1134       101s         58s         61s         59s
+ca1m-val-45663113       386        30s         20s         21s         21s
+ca1m-val-47115543       699        53s         36s         38s         37s
+TOTAL                  6157       483s        317s        330s        320s
+frames / second                  12.7        19.4        18.7        19.2 
+(owl_rgb reuses the OWLv2 detections from owl_rgbd, so it skips the detector.)

@@ -1,0 +1,8 @@
+
+results/ca1m/owl_rgb  (10 seqs, 6148 GT/pred frames, 5935 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.100   0.027   0.125   0.277   0.095
+per_scene    0.095   0.055   0.120   0.306   0.094
+per_frame: 65,219 true objects, 48,216 predicted boxes; found (recall) at IoU 0.05: 33.4%, at 0.25: 20.8%
+per_scene: 887 true objects, 807 predicted boxes; found (recall) at IoU 0.05: 39.9%, at 0.25: 25.5%
+wrote results/ca1m/owl_rgb/metrics.json

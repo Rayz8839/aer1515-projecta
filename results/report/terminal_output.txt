@@ -1,0 +1,33 @@
+# Output of ca1m_eval/eval_map.py for each configuration (RTX 5080, 2026-11-13)
+
+$ python ca1m_eval/eval_map.py --pred_dir results/ca1m/owl_rgbd
+
+results/ca1m/owl_rgbd  (10 seqs, 6148 GT/pred frames, 5971 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.216   0.096   0.296   0.388   0.230
+per_scene    0.288   0.230   0.326   0.460   0.317
+wrote results/ca1m/owl_rgbd/metrics.json
+
+$ python ca1m_eval/eval_map.py --pred_dir results/ca1m/owl_rgb
+
+results/ca1m/owl_rgb  (10 seqs, 6148 GT/pred frames, 5935 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.100   0.027   0.125   0.277   0.095
+per_scene    0.095   0.055   0.120   0.306   0.094
+wrote results/ca1m/owl_rgb/metrics.json
+
+$ python ca1m_eval/eval_map.py --pred_dir results/ca1m/gt2d_rgbd
+
+results/ca1m/gt2d_rgbd  (10 seqs, 6138 GT/pred frames, 6081 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.450   0.388   0.566   0.625   0.494
+per_scene    0.404   0.387   0.508   0.583   0.441
+wrote results/ca1m/gt2d_rgbd/metrics.json
+
+$ python ca1m_eval/eval_map.py --pred_dir results/ca1m/gt2d_rgb
+
+results/ca1m/gt2d_rgb  (10 seqs, 6138 GT/pred frames, 6055 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.157   0.080   0.218   0.452   0.151
+per_scene    0.116   0.099   0.182   0.414   0.119
+wrote results/ca1m/gt2d_rgb/metrics.json

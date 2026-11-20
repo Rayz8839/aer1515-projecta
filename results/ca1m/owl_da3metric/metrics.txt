@@ -1,0 +1,19 @@
+==> filtering out: wall: 49
+==> filtering out: wall: 27
+==> filtering out: floor: 12
+==> filtering out: wall: 33
+==> filtering out: wall: 32
+==> filtering out: wall: 31
+==> filtering out: wall: 38
+==> filtering out: wall: 26
+==> filtering out: floor: 17
+==> filtering out: wall: 42
+==> filtering out: wall: 39
+
+results/ca1m/owl_da3metric  (10 seqs, 6148 GT/pred frames, 5976 frames with preds)
+               all   small  medium   large   AP@0.25
+per_frame    0.101   0.031   0.131   0.275   0.097
+per_scene    0.108   0.073   0.120   0.339   0.104
+per_frame: 65,219 true objects, 49,244 predicted boxes; found (recall) at IoU 0.05: 34.6%, at 0.25: 22.1%
+per_scene: 887 true objects, 942 predicted boxes; found (recall) at IoU 0.05: 44.9%, at 0.25: 28.7%
+wrote results/ca1m/owl_da3metric/metrics.json
